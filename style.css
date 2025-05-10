@@ -1,0 +1,144 @@
+/* Import Modern Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background: linear-gradient(135deg, #fbaf18, #009999, #009999);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Animate the background gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(140deg, #fbaf18, #ffa52f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.4rem 0;
+  color: linear-gradient(135deg, #fbaf18, #ff8f00);
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #e0f2f1;
+}
+
+/* Image Row */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.image-row img {
+  border-radius: 12px;
+  height: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Button Row */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button-row a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  padding: 0.75rem 1.6rem;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #fbaf18, #ff8f00);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.button-row a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ffd54f, #f57f17);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-row img {
+    width: 90%;
+    height: auto;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .button-row a {
+    width: 100%;
+    text-align: center;
+  }
+}
